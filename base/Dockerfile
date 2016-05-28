@@ -1,11 +1,11 @@
-FROM fedora:latest
+FROM ubuntu:latest
 
-MAINTAINER Matthew Farrellee <matt@cs.wisc.edu>
+MAINTAINER Daniel Streit <danws6@gmail.com>
 
-RUN yum update -y && yum install -y java tar
+RUN apt-get update && apt-get install java tar
 
-RUN curl -s http://archive.apache.org/dist/storm/apache-storm-0.9.3/apache-storm-0.9.3.tar.gz | \
+RUN curl -s http://archive.apache.org/dist/storm/apache-storm-1.0.1/apache-storm-1.0.1.tar.gz | \
       tar zxf - -C /opt && \
-      mv /opt/apache-storm-0.9.3 /opt/apache-storm
+      mv /opt/apache-storm-1.0.1 /opt/apache-storm
 
 ADD configure.sh /
