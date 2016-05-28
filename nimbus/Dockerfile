@@ -1,6 +1,6 @@
-FROM mattf/storm-base
+FROM dstreit/storm-base
 
-MAINTAINER Matthew Farrellee <matt@cs.wisc.edu>
+MAINTAINER Daniel Streit <danws6@gmail.com>
 
 ADD start.sh /
 
